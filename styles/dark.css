@@ -19,3 +19,17 @@
   --bkg-color: black;
   --accent-color-transparent: rgba(255, 0, 112, 0.4);
 }
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --accent-color: #FF0070;
+    --title-color: #DB00FF;
+    --text-color: #F1B2CE;
+    --subtitle-text-color: #000028;
+    --cover-image: url(../images/cover-image-dark.png);
+    --accent-sbtl-clr: #FF0070;
+    --display: flex;
+    --bkg-color: black;
+    --accent-color-transparent: rgba(255, 0, 112, 0.4);
+  }
+}
