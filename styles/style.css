@@ -83,6 +83,13 @@
   inline-size: 25px;
   block-size: 25px;
   inset-block-end: 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .decorated-zone::after {
+    margin-bottom: 40px;
+  }
 }
 
 .header__theme-menu {
@@ -246,7 +253,6 @@
   .why_section {
     display: grid;
     grid-template-columns: 236px 1fr;
-    column-gap: var(--gap);
     margin: 40px 0 0;
     column-gap: 20px;
   }
@@ -457,6 +463,40 @@
   display: grid;
   block-size: 100vh;
   position: relative;
+}
+/*Знаю, вы говорили убрать повторящиеся стили, но это единственный способ, который я нашел, позволяющий 
+расположить эти уголки как в макете*/ 
+
+.footer_decor::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--accent-sbtl-clr);
+  border-right: 1px solid var(--accent-sbtl-clr);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  margin-top: 10px;
+}
+
+.footer_decor::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--accent-sbtl-clr);
+  border-left: 1px solid var(--accent-sbtl-clr);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-end: 0;
+  margin-bottom: 11px;
+}
+
+@media (min-width: 768px) {
+  .footer_decor::before {
+    margin-top: 20px;
+  }
+  .footer_decor::after {
+    margin-bottom: 20px;
+  }
 }
 
 .footer_text {
